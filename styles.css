@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+}
+
+
+/* NAVBAR */
+.navbar {
+    background-color: #000;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* SECCIÓN PRESENTACIÓN */
+/* HEADER / PRESENTACIÓN */
+header.presentation {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.presentation-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* FOTO RECTANGULAR */
+.presentation-container img {
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+/* TEXTO DEL NOMBRE */
+.presentation-text {
+    margin-left: 30px;
+}
+
+.presentation-text h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.presentation-text h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #ccc;
+    letter-spacing: 1px;
+}
+
+
+/* SECCIONES GENERALES */
+/* TODAS LAS SECCIONES COMO CAJAS */
+section {
+    background-color: #111;
+    color: white;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    border: 1px solid #2a2a2a;
+}
+
+section h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    border-left: 5px solid white;
+    padding-left: 15px;
+}
+
+
+section h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid black;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+}
+
+section ul li::before {
+    content: "▪";
+    position: absolute;
+    left: -15px;
+}
+
+
+/* SOBRE MÍ */
+#about p {
+    line-height: 1.6;
+}
+
+/* HABILIDADES */
+#skills ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    list-style: square;
+    margin-left: 20px;
+}
+
+/* PROYECTOS */
+#projects .project {
+    border: 1px solid #000;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* CONTACTO */
+#contact ul {
+    list-style: none;
+}
+
+#contact li {
+    margin-bottom: 8px;
+}
+
+#contact a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .presentation-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .presentation-text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .presentation-container img {
+        width: 200px;
+        height: 260px;
+    }
+
+    #skills ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .presentation-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .presentation-text {
+        margin-left: 0;
+    }
+
+    .presentation-container img {
+        width: 200px;
+        height: 260px;
+    }
+}
+
+/* TODOS los links en blanco */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Efecto cuando pasás el mouse */
+a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* Cuando ya fue visitado (que NO se vuelva violeta) */
+a:visited {
+    color: white;
+}
+
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+#projects .item {
+    margin-bottom: 40px;       /* separa un item del otro */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;  /* línea sutil de separación */
+}
+
+#projects .item:last-child {
+    border-bottom: none; /* para que el último no tenga línea */
+}
+
+/* Un poco más de aire para los textos */
+#projects p {
+    line-height: 1.6;
+}
